@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Messenger\Stamp\HandledStamp;
 use Symfony\Component\Routing\Annotation\Route;
+use OpenApi\Attributes as OA;
 
 #[Route('/payment', name: 'payment.')]
 class PaymentController extends AbstractController
@@ -24,7 +25,17 @@ class PaymentController extends AbstractController
     ) {
     }
 
-    #[Route('', name: 'accept', methods: [Request::METHOD_POST])]
+    #[
+        Route('', name: 'accept', methods: [Request::METHOD_POST]),
+        OA\RequestBody(
+            content: new OA\JsonContent(
+                properties: [
+                    new OA\Property(property: 'payerUUID', type: 'string'),
+                    new OA\Property(property: 'amount', type: 'integer'),
+                ]
+            )
+        )
+    ]
     public function acceptPayment(Request $request): JsonResponse
     {
         $data = $request->toArray();
