@@ -20,9 +20,9 @@ class PaymentGatewayQueryDataProvider
             ],
             [
                 new GatewayView(1, 'Gateway1', 25),
-                new GatewayView(1, 'Gateway2', 25),
-                new GatewayView(1, 'Gateway3', 25),
-                new GatewayView(1, 'Gateway4', 25),
+                new GatewayView(2, 'Gateway2', 25),
+                new GatewayView(3, 'Gateway3', 25),
+                new GatewayView(4, 'Gateway4', 25),
             ]
         ];
         yield [
@@ -33,8 +33,8 @@ class PaymentGatewayQueryDataProvider
             ],
             [
                 new GatewayView(1, 'Gateway1', 75),
-                new GatewayView(1, 'Gateway2', 10),
-                new GatewayView(1, 'Gateway3', 15),
+                new GatewayView(2, 'Gateway2', 10),
+                new GatewayView(3, 'Gateway3', 15),
             ]
         ];
     }
@@ -44,8 +44,8 @@ class PaymentGatewayQueryDataProvider
         yield [
             [
                 new GatewayView(1, 'Gateway1', 75),
-                new GatewayView(1, 'Gateway2', 10),
-                new GatewayView(1, 'Gateway3', 15),
+                new GatewayView(2, 'Gateway2', 10),
+                new GatewayView(3, 'Gateway3', 15),
             ],
             new GatewayView(1, 'Gateway1', 75),
         ];
@@ -53,10 +53,10 @@ class PaymentGatewayQueryDataProvider
         yield [
             [
                 new GatewayView(1, 'Gateway1', 10),
-                new GatewayView(1, 'Gateway2', 80),
-                new GatewayView(1, 'Gateway3', 10),
+                new GatewayView(2, 'Gateway2', 80),
+                new GatewayView(3, 'Gateway3', 10),
             ],
-            new GatewayView(1, 'Gateway2', 80),
+            new GatewayView(2, 'Gateway2', 80),
         ];
     }
 }
