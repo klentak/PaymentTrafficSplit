@@ -11,7 +11,7 @@ use App\App\Shared\CQRS\Command\CommandHandler;
 use Symfony\Component\Cache\CacheItem;
 use Symfony\Contracts\Cache\CacheInterface;
 
-class PaymentHandler implements CommandHandler
+class PaymentCommandHandler implements CommandHandler
 {
     public function __construct(
         private readonly CacheInterface $cache,
