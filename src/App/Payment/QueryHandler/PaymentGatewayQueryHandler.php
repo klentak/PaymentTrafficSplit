@@ -80,7 +80,7 @@ class PaymentGatewayQueryHandler implements QueryHandler
 
         /** @var GatewayView $gatewayConfiguration */
         foreach ($gatewaysConfiguration as $gatewayConfiguration) {
-            if (in_array($gatewayConfiguration->getName(), $gatewaysNames)) {
+            if (in_array($gatewayConfiguration->getName(), $gatewaysNames, true)) {
                 $gateways[] = $gatewayConfiguration;
             }
         }
